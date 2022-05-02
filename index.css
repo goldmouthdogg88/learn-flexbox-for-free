@@ -1,0 +1,133 @@
+.container {
+  border: 5px solid #ffcc5c;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+
+# Learn Flexbox for free
+
+The first thing you need to understand is the concept of a container
+and its items. That's always how you build up your flexbox layouts.
+
+Adding flex lines up the elements horizontally,
+as opposed to vertically, distributes items from left to right,
+defaults as a block element
+
+it takes up all available space in the width, expect for the defined margins on
+the left and right.
+*/
+
+/* Main axis and cross axis
+
+   A Flexbox container always has a direction, and by default it is horizontal. Thats how it lays out its items, the main axis goes from left to right along the row. We have a cross axis that goes from top to bottom.
+
+   The reason you need to understand this is that we are using different CSS properties in order to position our content along the main axis, which goes horizontally in this case and the cross axis that goes vertically in this case. However that is not always the case!
+
+   We can also flip the direction of the flexbox container. We can this by applying the flex-direction property.
+
+
+   ```css
+    flex-direction: [row, column]
+   ```
+*/
+
+/*
+
+Justfy Content - Flexbox tutorial
+
+The items along the main axis go from left to right, we don't want all of our items
+to be on squeezed together at the start of the main axis (which is the lefthand side). If we change to flex-end we see the content moves to the end of the main axis (the righthand side).
+
+We can also use justify-content: center which centers the content.
+
+it also has some other nice properties such as space, gives each item an equal amount of space on its lefthand side and righthand side. When two items are next to each other the space is twice as wide as of the start of the container or the end the container. It (justify-content) can take a range of different values
+
+justify-content:
+  flex-end: will move to right side
+  center: will center the content
+  space-around: 
+  
+  space-between: will give items equal amount of space in the container
+  
+  space-evenly: divides the spaces between the elements evenly
+
+*/
+
+/*
+
+https://scrimba.com/learn/flexbox/positioning-items-flexbox-tutorial-cGNK6fN
+
+Positioning items - Flexbox tutorial
+
+I'll explain how to adjust the position of single items on the main axis,
+using the technique of margin: auto.
+
+Lets move the logout item to the right, we'll have to target the item, which each element has been given class names.
+
+.logout {
+  margin-left: auto;
+}
+
+If we want to move both the logout and Search elements to the end of the main axis. We can apply the following property
+
+.search {
+  margin-left: auto;
+
+
+Next we have a challenge to move the .home element to the beginning of the main axis.
+
+.home {
+  .margin-right: auto;
+}
+
+*/
+
+/*
+
+The flex property
+
+allows you to set the width of the items according to the width of the container. Meaning they will become responsive. If we want all the items to grow and shrink to the size of the container, we apply the property flex:
+
+```css
+
+.container {
+  border: 5px solid #ffcc5c;
+  display: flex;
+}
+
+ > all direct children
+.container > div {
+  flex: 1;
+}
+
+```
+
+flex: is actaully short hand for three other properties.
+
+flex-grow
+flex-shrink
+flex-basis
+
+setting flex to 1 is better than setting it width to a percentage like 33.33333333% then we have to change the number. As flex will handle the maths and make the element responsive.
+
+What if we want search to be twice as wide as the rest of the elements
+
+.container > .search {
+  flex: 2
+}
+
+More practical use case, is use one item to do all the flexing while the other ramain the same
+
+only
+
+*/
+
+/*
+
+  Align items REWATCH
+  
+
+
+*/
